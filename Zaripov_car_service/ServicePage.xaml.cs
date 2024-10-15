@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 namespace Zaripov_car_service
 {
+    
     /// <summary>
     /// Логика взаимодействия для ServicePage.xaml
     /// </summary>
@@ -23,6 +24,9 @@ namespace Zaripov_car_service
         public ServicePage()
         {
             InitializeComponent();
+
+            var currentServices = ZaripovAutoserviceEntities.GetContext().Service.ToList();
+            ServiceListView.ItemsSource = currentServices;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -15,6 +15,14 @@ namespace Zaripov_car_service
     
     public partial class ZaripovAutoserviceEntities : DbContext
     {
+        private static ZaripovAutoserviceEntities _context;
+
+        public static ZaripovAutoserviceEntities GetContext()
+        {
+            if(_context == null )
+                _context = new ZaripovAutoserviceEntities();
+            return _context;
+        }
         public ZaripovAutoserviceEntities()
             : base("name=ZaripovAutoserviceEntities")
         {
