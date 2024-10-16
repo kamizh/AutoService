@@ -64,8 +64,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="AddEditPagexaml.xaml.cs">
-      <DependentUpon>AddEditPagexaml.xaml</DependentUpon>
+    <Compile Include="AddEditPage.xaml.cs">
+      <DependentUpon>AddEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>ZaripovModel.tt</DependentUpon>
@@ -119,7 +119,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ZaripovModel.edmx</DependentUpon>
     </Compile>
-    <Page Include="AddEditPagexaml.xaml">
+    <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
