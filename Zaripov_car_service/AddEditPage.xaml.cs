@@ -35,12 +35,12 @@ namespace Zaripov_car_service
                 errors.AppendLine("Укажите название услуги");
             if (_currentServise.Cost == 0)
                 errors.AppendLine("Укажите стоимость услуги");
-            if (_currentServise.Discount == null)
+            if (_currentServise.DiscountInt == null)
                 errors.AppendLine("Укажите скидку");
-            if (_currentServise.Discount > 1)
-                errors.AppendLine("Укажите скидку");
-            if (_currentServise.Discount < 0)
-                errors.AppendLine("Укажите скидку");
+            if (_currentServise.DiscountInt > 100)
+                errors.AppendLine("Скидка не может быть больше 100");
+            if (_currentServise.DiscountInt < 0)
+                errors.AppendLine("Скидка не может быть отрицательной! ");
             if (string.IsNullOrWhiteSpace(_currentServise.DurationInSeconds))
                 errors.AppendLine("Укажите длительность услуги");
             if (errors.Length > 0)
