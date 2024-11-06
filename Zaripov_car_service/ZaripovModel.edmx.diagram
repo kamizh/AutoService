@@ -4,21 +4,21 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="f2038ab90a2845d6a2e11a83e90ec90e" Name="Diagram1" ZoomLevel="74">
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Client" Width="1.5" PointX="0.5" PointY="8.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ClientService" Width="1.5" PointX="3" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Gender" Width="1.5" PointX="1.5" PointY="13.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Manufacturer" Width="1.5" PointX="1.125" PointY="5.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Product" Width="1.5" PointX="5" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ProductPhoto" Width="1.5" PointX="8.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ProductSale" Width="1.5" PointX="3.375" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Service" Width="1.5" PointX="0.5" PointY="15.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ServicePhoto" Width="1.5" PointX="4.75" PointY="12.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Tag" Width="1.5" PointX="8" PointY="11.375" IsExpanded="true" />
+      <Diagram DiagramId="7a29f057df774d4bbc77e8e415703d0e" Name="Diagram1">
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Client" Width="1.5" PointX="0.75" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ClientService" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.DocumentByService" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Gender" Width="1.5" PointX="1.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Manufacturer" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Product" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ProductPhoto" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ProductSale" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Service" Width="1.5" PointX="7.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.ServicePhoto" Width="1.5" PointX="10" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ZaripovAutoserviceModel.Tag" Width="1.5" PointX="3" PointY="15.25" IsExpanded="true" />
         <AssociationConnector Association="ZaripovAutoserviceModel.FK_Client_Gender" ManuallyRouted="false" />
         <AssociationConnector Association="ZaripovAutoserviceModel.FK_ClientService_Client" ManuallyRouted="false" />
-        <AssociationConnector Association="ZaripovAutoserviceModel.FK_ClientService_Service" ManuallyRouted="false" />
+        <AssociationConnector Association="ZaripovAutoserviceModel.FK_ClientService_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="ZaripovAutoserviceModel.FK_DocumentByService_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="ZaripovAutoserviceModel.FK_ProductSale_ClientService" ManuallyRouted="false" />
         <AssociationConnector Association="ZaripovAutoserviceModel.FK_Product_Manufacturer" ManuallyRouted="false" />

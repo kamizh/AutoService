@@ -48,6 +48,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <Grid Background="{Binding FonStyle}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition></ColumnDefinition>
                             <ColumnDefinition></ColumnDefinition>
@@ -78,7 +79,9 @@
                         <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                             <Button Name="EditButton" Click="EditButton_Click" Content="редактировать" Margin="2"></Button>
                             <Button Name="DeleteButton" Click="DeleteButton_Click" Content="удалить" Margin="2"></Button>
+                            <Button Name="SignUpButton" Content="записать" Margin="2" Click="SignUpButton_Click"></Button>
                         </StackPanel>
+                        </Grid>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

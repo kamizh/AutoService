@@ -41,13 +41,40 @@ namespace Zaripov_car_service
                 errors.AppendLine("Скидка не может быть больше 100");
             if (_currentServise.DiscountInt < 0)
                 errors.AppendLine("Скидка не может быть отрицательной! ");
-            if (string.IsNullOrWhiteSpace(_currentServise.DurationInSeconds))
+            if (string.IsNullOrWhiteSpace(_currentServise.DurationInSeconds.ToString()))
                 errors.AppendLine("Укажите длительность услуги");
+            int seconds = Convert.ToInt32(_currentServise.DurationInSeconds.ToString());
+            if (seconds <= 0 || seconds > 240)
+            {
+                errors.AppendLine("Длительность не может быть больше 240 минут или меньше 0");
+            }
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
+            var allServices = ZaripovAutoserviceEntities.GetContext().Service.ToList();
+            allServices = allServices.Where(p => p.Title == _currentServise.Title).ToList();
+            if(allServices.Count == 0)
+            {
+                if(_currentServise.ID == 0)
+                    ZaripovAutoserviceEntities.GetContext().Service.Add(_currentServise);
+                try
+                {
+                    ZaripovAutoserviceEntities.GetContext().SaveChanges();
+                    MessageBox.Show("Информация сохранена");
+                    Manager.MainFrame.GoBack();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString()); 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Уже существует такая услуга");
+            }
+
             if (_currentServise.ID == 0)
                 ZaripovAutoserviceEntities.GetContext().Service.Add(_currentServise);
             try
